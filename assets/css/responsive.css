@@ -1,0 +1,88 @@
+@media (max-width: 1399px) {
+}
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+  /*navigation*/
+  .header {
+    top: 0;
+  }
+  .header .logo {
+    opacity: 1;
+    visibility: visible;
+  }
+  .header .hamburger {
+    display: flex;
+    margin-left: 20px;
+    background-color: var(--thm-lavender);
+  }
+
+  .header .navigation.open {
+    left: 0;
+  }
+
+  .header .navigation .main-menu {
+    display: block;
+  }
+
+  .header .navigation {
+    display: block;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    width: 250px;
+    background-color: var(--thm-white);
+    transition: 0.5s all;
+    z-index: 100;
+  }
+  .header .navigation .main-menu > li:not(:last-child) {
+    border-bottom: 1px solid var(--thm-black);
+  }
+  .help-icon {
+    display: none;
+  }
+  .service-black-box {
+    margin-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .banner-section .banner-text .banner-title {
+    font-size: 48px;
+  }
+}
+@media (max-width: 575px) {
+  .company-badge .company-title {
+    font-size: 34px;
+  }
+  .section-header .text.bg-text {
+    max-width: 100%;
+    padding-right: 50px;
+  }
+}
+@media (max-width: 480px) {
+  .company-badge {
+    margin-top: -55px;
+  }
+  .company-badge .logo {
+    width: 70px;
+    margin-right: 15px;
+  }
+  .company-badge .company-title {
+    width: calc(100% - 85px);
+    font-size: 30px;
+  }
+  .banner-section .banner-text .banner-title {
+    font-size: 30px;
+  }
+  .banner-section .banner-text .banner-title br {
+    display: none;
+  }
+}
+@media (min-width: 576px) {
+  .modal-bottom-right {
+    max-width: 250px;
+    margin-right: 1.75rem;
+  }
+}
