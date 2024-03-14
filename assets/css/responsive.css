@@ -82,7 +82,7 @@
 }
 @media (min-width: 576px) {
   .modal-bottom-right {
-    max-width: 250px;
+    max-width: 200px;
     margin-right: 1.75rem;
   }
 }

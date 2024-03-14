@@ -2,14 +2,22 @@
     'use strict';
     // Preloader
     $(document).ready(function () {
-        if(!localStorage.getItem("closeModal")){
-            $('#exampleModal').modal('show');
-        }
-        let closeModal = document.getElementById("closeModal");
-        closeModal.addEventListener("click", function () {
-            localStorage.setItem("closeModal", true);
+        $('#exampleModal').modal('show');
+        function hideModal() {
             $('#exampleModal').modal('hide');
-        });
+            // Call the function recursively after 5 seconds
+            setTimeout(showModal, 5000);
+        }
+
+        // Function to show modal
+        function showModal() {
+            $('#exampleModal').modal('show');
+            // Call the function to hide modal after 5 seconds
+            setTimeout(hideModal, 5000);
+        }
+
+        // Initial call to show modal after 1 minute
+        setTimeout(showModal, 60000);
     });
     setTimeout(function () {
         $('.preloader').addClass('hidden');
@@ -49,6 +57,7 @@
         autoplaySpeed: 5000,
         dots: true,
         arrows: false,
+        adaptiveHeight: true,
         dotsClass: "slick-dots dark d-flex container",
     });
     $('.clients-slider').slick({

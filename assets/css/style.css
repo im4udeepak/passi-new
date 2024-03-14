@@ -180,6 +180,15 @@ ul.custom > li::before {
   margin-bottom: 0;
   margin-top: 20px;
 }
+.section-header .text .link{
+  color: var(--thm-lavender);
+}
+.section-header .text .link:hover{
+  color: var(--thm-white);
+}
+.section-header .text .link.white:hover{
+  color: var(--thm-black);
+}
 .section-header.style_two {
   text-align: left;
   color: var(--thm-white);
@@ -222,6 +231,17 @@ ul.custom > li::before {
 .section-header.style_four {
   margin-left: 15px;
   padding-top: 30px;
+}
+.as-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  z-index: 0;
 }
 /*Slick Arrows*/
 .slick-arrow {
@@ -519,7 +539,7 @@ input::-webkit-inner-spin-button {
 }
 .header .logo {
   padding: 15px 0;
-  width: 250px;
+  width: 280px;
   /* opacity: 0;
   visibility: hidden; */
 }
@@ -593,7 +613,7 @@ input::-webkit-inner-spin-button {
 }
 /* banner */
 .banner-section .slide-item {
-  height: 70vh;
+  height: 55vh;
   width: 100%;
   position: relative;
 }
@@ -622,7 +642,7 @@ input::-webkit-inner-spin-button {
   color: var(--thm-white);
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 60px;
+  font-size: 48px;
 }
 /* company-badge */
 .company-badge {
@@ -645,10 +665,10 @@ input::-webkit-inner-spin-button {
 /* about-company */
 .about-company .text {
   text-align: center;
-  font-size: 28px;
+  font-size: 24px;
   max-width: 850px;
   font-weight: 500;
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
 }
 /* clients */
 .clients-slider .slide-item {
