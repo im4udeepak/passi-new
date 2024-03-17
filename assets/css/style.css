@@ -39,6 +39,21 @@
     transform: translate3d(0, 0, 0);
   }
 }
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; /* Initially hidden */
+  }
+  20% {
+    opacity: 1; /* Fade in for first 20% of time */
+  }
+  80% {
+    opacity: 1; /* Stay visible for next 60% of time */
+  }
+  100% {
+    opacity: 0; /* Fade out for last 20% of time */
+  }
+}
 html {
   overflow-x: hidden;
 }
@@ -180,13 +195,13 @@ ul.custom > li::before {
   margin-bottom: 0;
   margin-top: 20px;
 }
-.section-header .text .link{
+.section-header .text .link {
   color: var(--thm-lavender);
 }
-.section-header .text .link:hover{
+.section-header .text .link:hover {
   color: var(--thm-white);
 }
-.section-header .text .link.white:hover{
+.section-header .text .link.white:hover {
   color: var(--thm-black);
 }
 .section-header.style_two {
@@ -232,7 +247,7 @@ ul.custom > li::before {
   margin-left: 15px;
   padding-top: 30px;
 }
-.as-bg{
+.as-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -887,14 +902,14 @@ input::-webkit-inner-spin-button {
   }
 }
 /* onloadModal */
-.onloadModal{
+.onloadModal {
   pointer-events: none;
 }
 .onloadModal .modal-bottom-right {
   align-items: flex-end;
   justify-content: flex-end;
 }
-.onloadModal .modal-content{
+.onloadModal .modal-content {
   background: none;
   border: none;
 }
@@ -902,6 +917,80 @@ input::-webkit-inner-spin-button {
   background: none;
   padding: 0;
 }
-.modal-backdrop{
+.modal-backdrop {
   display: none;
+}
+.blockquote {
+  font-family: var(--thm-font);
+  text-align: center;
+  margin: 0 auto 30px;
+  font-weight: 500;
+  font-size: 28px;
+  max-width: 300px;
+}
+.blockquote:after,
+.blockquote:before {
+  content: '';
+  display: block;
+  max-width: 50px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+}
+.blockquote:after {
+  background-image: url('../images/icons/quote-right.png');
+  margin-top: 15px;
+}
+.blockquote:before {
+  background-image: url('../images/icons/quote-left.png');
+  margin-bottom: 15px;
+}
+.service-details {
+  position: relative;
+  border: 20px solid #d6d6d6;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.service-details .slick-slider .slick-item {
+  cursor: pointer;
+  /* height: 100vh; */
+}
+.support-icon {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+}
+.support-icon img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 300px;
+  opacity: 0;
+  animation: fadeInOut 15s infinite;
+  display: block;
+}
+.support-icon .image-one {
+  animation-delay: 0s; /* Start immediately */
+}
+
+.support-icon .image-two {
+  animation-delay: 5s; /* Delay 3 seconds */
+}
+
+.support-icon .image-three {
+  animation-delay: 10s; /* Delay 6 seconds */
+}
+.service-block {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.service-block .title {
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-weight: 600;
+  margin-top: 5px;
 }

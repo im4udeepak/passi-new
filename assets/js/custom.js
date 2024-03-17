@@ -102,25 +102,36 @@
             }
         ]
     });
+    $('.slider-one').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        dots: false,
+        arrows: true,
+        adaptiveHeight: true,
+        dotsClass: "slick-dots dark d-flex container",
+    });
     function openIframeModal(url, title) {
         // Set the src attribute of the iframe
-        $("#iframeContent").attr("src", url);
-        $("#modalLabel").html(title);
+        $("#serviceModalContent").attr("src", url);
+        $("#serviceModalLabel").html(title);
         // Open the modal
-        $("#myModal").modal("show");
+        $("#serviceModal").modal("show");
     }
 
     // Event listener for the button click
-    $(".modal-btn").click(function () {
+    $(".openModal").click(function () {
         // Read the data-src attribute from the button
         var iframeSrc = $(this).data("src");
         var iframeTitle = $(this).data("title");
 
         // Open the modal with the specified iframe source URL
-        openIframeModal(iframeSrc, iframeTitle);
+        openIframeModal(iframeSrc, iframeTitle?.replaceAll("_", " "));
     });
     $(".close").click(function () {
-        $("#myModal").modal("hide");
+        $("#serviceModal").modal("hide");
     });
     // Sticky Header
     var header = $(".can-sticky");
