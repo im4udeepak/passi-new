@@ -102,16 +102,18 @@
             }
         ]
     });
-    $('.slider-one').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        dots: false,
-        arrows: true,
-        adaptiveHeight: true,
-        dotsClass: "slick-dots dark d-flex container",
+    $('.slider-one').each(function (index) {
+        $(this).slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            dots: false,
+            arrows: true,
+            adaptiveHeight: true,
+            dotsClass: "slick-dots dark d-flex container",
+        });
     });
     function openIframeModal(url, title) {
         // Set the src attribute of the iframe
@@ -133,6 +135,7 @@
     });
     $(".close").click(function () {
         $("#serviceModal").modal("hide");
+        openIframeModal("", "");
     });
     // Sticky Header
     var header = $(".can-sticky");
