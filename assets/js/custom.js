@@ -115,6 +115,7 @@
     });
     function openIframeModal(url, title) {
         // Set the src attribute of the iframe
+        // #toolbar=0&navpanes=0&scrollbar=0
         $("#serviceModalContent").attr("src", url);
         $("#serviceModalLabel").html(title);
         // Open the modal

@@ -539,7 +539,7 @@ input::-webkit-inner-spin-button {
   left: 0;
   right: 0;
   z-index: 22;
-  background: var(--thm-white);
+  background: #ffffff85;
   animation-duration: 1s;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   animation-fill-mode: both;
@@ -557,6 +557,13 @@ input::-webkit-inner-spin-button {
   width: 280px;
   /* opacity: 0;
   visibility: hidden; */
+}
+.header .logo > a {
+  display: flex;
+}
+.header .logo .celebrate {
+  height: 70px;
+  margin-right: 10px;
 }
 .header.sticky .logo,
 .header.top .logo {
@@ -692,12 +699,25 @@ input::-webkit-inner-spin-button {
   height: 130px;
 }
 /* breadcrumb */
-.breadcrumb {
-  padding-top: 175px;
+.breadcrumb-section {
+  padding: 30px 0px 0;
 }
-.breadcrumb .page-title {
+.breadcrumb-section .page-title {
   text-transform: uppercase;
+  text-align: right;
+  font-size: 28px;
 }
+.breadcrumb-section .breadcrumb {
+  margin-bottom: 30px;
+}
+.breadcrumb-section .breadcrumb .breadcrumb-item > a {
+  color: var(--thm-white);
+}
+.breadcrumb-section .breadcrumb .breadcrumb-item.active::before,
+.breadcrumb-section .breadcrumb .breadcrumb-item.active {
+  color: #4e90a7;
+}
+
 /* about-box */
 .counter-box,
 .about-box {
@@ -955,7 +975,7 @@ input::-webkit-inner-spin-button {
 
 .service-details .slick-slider .slick-item {
   cursor: pointer;
-  /* height: 100vh; */
+  height: 700px;
 }
 .support-icon {
   position: absolute;
@@ -987,6 +1007,9 @@ input::-webkit-inner-spin-button {
   text-align: center;
   margin-bottom: 30px;
   width: 100%;
+}
+.service-block .image-fit {
+  height: 150px;
 }
 .service-block .title {
   text-transform: uppercase;

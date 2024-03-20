@@ -1,6 +1,12 @@
 @media (max-width: 1399px) {
 }
 @media (max-width: 1199px) {
+  .header .logo {
+    width: 250px;
+  }
+  .header .logo .celebrate {
+    height: 60px;
+  }
 }
 @media (max-width: 991px) {
   /*navigation*/
@@ -91,5 +97,11 @@
     max-width: 100px;
     margin-right: 1.75rem;
     margin-left: auto;
+  }
+  .header .logo {
+    width: 150px;
+  }
+  .header .logo .celebrate {
+    height: 40px;
   }
 }
