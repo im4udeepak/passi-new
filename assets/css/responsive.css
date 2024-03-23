@@ -39,12 +39,15 @@
     height: 100vh;
     overflow-y: auto;
     width: 250px;
-    background-color: var(--thm-white);
+    background-color: var(--thm-black);
     transition: 0.5s all;
     z-index: 100;
   }
   .header .navigation .main-menu > li:not(:last-child) {
-    border-bottom: 1px solid var(--thm-black);
+    border-bottom: 1px solid var(--thm-white);
+  }
+  .header .navigation .main-menu > .menu-item > a {
+    color: var(--thm-white);
   }
   .help-icon {
     display: none;

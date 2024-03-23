@@ -196,7 +196,8 @@ ul.custom > li::before {
   margin-top: 20px;
 }
 .section-header .text .link {
-  color: var(--thm-lavender);
+  font-size: 20px;
+  color: red;
 }
 .section-header .text .link:hover {
   color: var(--thm-white);
@@ -539,10 +540,17 @@ input::-webkit-inner-spin-button {
   left: 0;
   right: 0;
   z-index: 22;
-  background: #ffffff85;
+  /* background: #ffffff85; */
+  background: #000000a8;
   animation-duration: 1s;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   animation-fill-mode: both;
+}
+.header.sticky .passi-logo {
+  filter: invert(1);
+}
+.header.sticky .navigation .main-menu > .menu-item > a {
+  color: white;
 }
 .header .header_actions,
 .header .inner-wrap,
@@ -560,10 +568,12 @@ input::-webkit-inner-spin-button {
 }
 .header .logo > a {
   display: flex;
+  align-items: center;
 }
 .header .logo .celebrate {
-  height: 70px;
-  margin-right: 10px;
+  height: 75px;
+  /* margin-right: 10px; */
+  transform: scale(1.1);
 }
 .header.sticky .logo,
 .header.top .logo {
@@ -700,15 +710,17 @@ input::-webkit-inner-spin-button {
 }
 /* breadcrumb */
 .breadcrumb-section {
-  padding: 30px 0px 0;
+  padding: 15px 0px 0;
+  /* display: none; */
 }
 .breadcrumb-section .page-title {
   text-transform: uppercase;
   text-align: right;
-  font-size: 28px;
+  font-size: 22px;
+  margin-bottom: 15px;
 }
 .breadcrumb-section .breadcrumb {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .breadcrumb-section .breadcrumb .breadcrumb-item > a {
   color: var(--thm-white);
@@ -937,34 +949,37 @@ input::-webkit-inner-spin-button {
   background: none;
   padding: 0;
 }
-.modal-backdrop {
-  display: none;
+#serviceModal .modal-content {
+  height: 80vh;
 }
+/* .modal-backdrop {
+  display: none;
+} */
 .blockquote {
   font-family: var(--thm-font);
   text-align: center;
   margin: 0 auto 30px;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 18px;
   max-width: 300px;
 }
 .blockquote:after,
 .blockquote:before {
   content: '';
   display: block;
-  max-width: 50px;
-  height: 40px;
+  max-width: 40px;
+  height: 30px;
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0 auto;
 }
 .blockquote:after {
   background-image: url('../images/icons/quote-right.png');
-  margin-top: 15px;
+  margin-top: 10px;
 }
 .blockquote:before {
   background-image: url('../images/icons/quote-left.png');
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .service-details {
   position: relative;
@@ -975,7 +990,7 @@ input::-webkit-inner-spin-button {
 
 .service-details .slick-slider .slick-item {
   cursor: pointer;
-  height: 700px;
+  height: 450px;
 }
 .support-icon {
   position: absolute;
@@ -986,7 +1001,7 @@ input::-webkit-inner-spin-button {
   position: absolute;
   bottom: 0;
   right: 0;
-  max-width: 300px;
+  max-width: 200px;
   opacity: 0;
   animation: fadeInOut 15s infinite;
   display: block;
