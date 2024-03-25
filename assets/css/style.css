@@ -727,6 +727,7 @@ input::-webkit-inner-spin-button {
 .breadcrumb-section .breadcrumb .breadcrumb-item > a {
   color: var(--thm-white);
 }
+.breadcrumb-item+.breadcrumb-item::before,
 .breadcrumb-section .breadcrumb .breadcrumb-item.active::before,
 .breadcrumb-section .breadcrumb .breadcrumb-item.active {
   color: #4e90a7;
